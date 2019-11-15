@@ -19,7 +19,7 @@ USE publicacao;
 # ----------------------------------------------------------------------------
 
 CREATE TABLE fact_publicacao (
-	data_id INT NOT NULL,
+    data_id INT NOT NULL,
     autor_id INT NOT NULL,
     local_publicacao_id INT NOT NULL,
     quantidade_publicacao TINYINT(1) NOT NULL DEFAULT 1,
@@ -27,7 +27,7 @@ CREATE TABLE fact_publicacao (
 );
 
 CREATE TABLE dim_data (
-	id INT NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
     dia INT(2),
     descricao_dia VARCHAR(30),
     mes INT(2),
@@ -38,17 +38,23 @@ CREATE TABLE dim_data (
 );
 
 CREATE TABLE dim_autor (
-	id INT NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
     nome_autor VARCHAR(30) UNIQUE,
-    departamento VARCHAR(30),
+    departamento_sigla VARCHAR(30),
+    departamento_extenso VARCHAR(50),
+    instituto_sigla VARCHAR(30),
+    instituto_extenso VARCHAR(50),
+    universidade_sigla VARCHAR(30),
+    universidade_extenso VARCHAR(50),
     linha_pesquisa VARCHAR(30),
     CONSTRAINT pk_dim_autor PRIMARY KEY (id)
 );
 
 CREATE TABLE dim_local_publicacao (
-	id INT NOT NULL,
-    nome_local VARCHAR(30) UNIQUE,
-    tipo_publicacao VARCHAR(30),
+    id INT NOT NULL AUTO_INCREMENT,
+    issn VARCHAR(30) UNIQUE,
+    nome_local VARCHAR(50) UNIQUE,
+    tipo_publicacao VARCHAR(50),
     classificacao_qualis VARCHAR(2),
     CONSTRAINT pk_dim_local_publicacao PRIMARY KEY (id)
 );
