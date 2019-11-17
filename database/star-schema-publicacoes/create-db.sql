@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # - FILE: create-db.sql
-# - DESC: Create publicacoes star schema.
+# - DESC: Create publicacao star schema.
 # ----------------------------------------------------------------------------
 # - AUTH: Andre Perez, andre.marcos.perez@usp.br
 # - DATE: 2019-11-13

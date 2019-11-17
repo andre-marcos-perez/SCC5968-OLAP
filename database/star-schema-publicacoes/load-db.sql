@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # - FILE: load-db.sql
-# - DESC: Load data into publicacoes star schema.
+# - DESC: Load data into publicacao star schema.
 # ----------------------------------------------------------------------------
 # - AUTH: Andre Perez, andre.marcos.perez@usp.br
 # - DATE: 2019-11-13
