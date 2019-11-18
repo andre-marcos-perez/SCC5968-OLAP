@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # - FILE: load-db.sql
-# - DESC: Load data into publicacao-prova constelation schema.
+# - DESC: Load data into publicacao star schema.
 # ----------------------------------------------------------------------------
 # - AUTH: Andre Perez, andre.marcos.perez@usp.br
 # - DATE: 2019-11-13
@@ -10,7 +10,7 @@
 # -- SETUP
 # ----------------------------------------------------------------------------
 
-USE constelation_publicacao_prova;
+USE publicacao;
 
 # ----------------------------------------------------------------------------
 # -- MAIN

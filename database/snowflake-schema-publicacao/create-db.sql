@@ -40,7 +40,7 @@ CREATE TABLE dim_data (
 CREATE TABLE dim_autor (
     id INT NOT NULL AUTO_INCREMENT,
     departamento_id INT NOT NULL,
-    nome_autor VARCHAR(30) UNIQUE,
+    nome_autor VARCHAR(30),
     linha_pesquisa VARCHAR(30),
     CONSTRAINT pk_dim_autor PRIMARY KEY (id)
 );
