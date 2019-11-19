@@ -41,6 +41,20 @@ join dim_local_publicacao local_publicacao
 on fact.local_publicacao_id = local_publicacao.id 
 where local_publicacao.classificacao_qualis = 'A2';
 
+# - Question 1.g
+
+select sum(fact.quantidade_publicacao) as total_pub
+from fact_publicacao fact 
+join dim_autor autor 
+on fact.autor_id = autor.id 
+where autor.universidade_sigla = 'USP';
+
+select autor.linha_pesquisa, 
+sum(fact.quantidade_publicacao) as total_pub
+from fact_publicacao fact join dim_autor autor
+on fact.autor_id = autor.id 
+group by 1;
+
 # - Question 1.h
 
 -- Slice

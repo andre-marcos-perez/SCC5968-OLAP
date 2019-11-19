@@ -16,10 +16,22 @@ USE snowflake_publicacao;
 # -- MAIN
 # ----------------------------------------------------------------------------
 
-# - Join dim_autor, dim_departamento, dim_instituto e dim_universidade.
+# - Question 1.g
 
-select autor.*, departamento.*, instituto.*, universidade.*
-from dim_autor autor
-join dim_departamento departamento on autor.departamento_id = departamento.id
-join dim_instituto instituto on departamento.instituto_id = instituto.id
-join dim_universidade universidade on instituto.universidade_id = universidade.id;
+select sum(fact.quantidade_publicacao) as total_pub
+from fact_publicacao fact 
+join dim_autor autor 
+on fact.autor_id = autor.id 
+join dim_departamento departamento 
+on autor.departamento_id = departamento.id
+join dim_instituto instituto 
+on departamento.instituto_id = instituto.id
+join dim_universidade universidade 
+on instituto.universidade_id = universidade.id
+where universidade.universidade_sigla = 'USP';
+
+select autor.linha_pesquisa, 
+sum(fact.quantidade_publicacao) as total_pub
+from fact_publicacao fact join dim_autor autor
+on fact.autor_id = autor.id 
+group by 1;
