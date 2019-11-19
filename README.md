@@ -10,7 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 To run the project, install the following:
 
-* [MySQL Server 8.0.18](hhttps://dev.mysql.com/downloads/mysql/) - Official MySQL Server;
+* [MySQL Server 8.0.18](https://dev.mysql.com/downloads/mysql/) - Official MySQL Server;
 * [MySQL Workbench 8.0.18](https://dev.mysql.com/downloads/workbench/) - Official MySQL Integrated Development Environment.
 
 ### Deployment
@@ -30,7 +30,7 @@ database\<schema>\query-db.sql
 
 ## Authors
 
-* **André Perez** - *Initial work* - [LinkedIn](https://www.linkedin.com/in/andremarcosperez/)
+* **André Perez** - [LinkedIn](https://www.linkedin.com/in/andremarcosperez/)
 
 ## License
 
