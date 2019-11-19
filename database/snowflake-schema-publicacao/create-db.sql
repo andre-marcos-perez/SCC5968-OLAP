@@ -49,7 +49,7 @@ CREATE TABLE dim_departamento (
 	id INT NOT NULL AUTO_INCREMENT,
     instituto_id INT NOT NULL,
     departamento_sigla VARCHAR(30),
-    departamento_extenso VARCHAR(50),
+    departamento_extenso VARCHAR(75),
     CONSTRAINT pk_dim_instituto PRIMARY KEY (id)
 );
 
@@ -57,7 +57,7 @@ CREATE TABLE dim_instituto (
 	id INT NOT NULL AUTO_INCREMENT,
     universidade_id INT NOT NULL,
     instituto_sigla VARCHAR(30),
-    instituto_extenso VARCHAR(50),
+    instituto_extenso VARCHAR(75),
     CONSTRAINT pk_dim_instituto PRIMARY KEY (id)
 );
 

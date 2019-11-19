@@ -56,3 +56,11 @@ INSERT INTO dim_local_publicacao VALUES (4, '0272-1716', 'IEEE Computer Graphics
 # ----------------------------------------------------------------------------
 # -- ROLLBACK
 # ----------------------------------------------------------------------------
+
+DELETE FROM fact_publicacao;
+DELETE FROM dim_data;
+DELETE FROM dim_autor;
+DELETE FROM dim_departamento;
+DELETE FROM dim_instituto;
+DELETE FROM dim_universidade;
+DELETE FROM dim_local_publicacao;

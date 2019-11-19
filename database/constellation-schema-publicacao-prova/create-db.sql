@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # - FILE: create-db.sql
-# - DESC: Create publicacao-prova constelation schema.
+# - DESC: Create publicacao-prova constellation schema.
 # ----------------------------------------------------------------------------
 # - AUTH: Andre Perez, andre.marcos.perez@usp.br
 # - DATE: 2019-11-13
@@ -10,9 +10,9 @@
 # -- SETUP
 # ----------------------------------------------------------------------------
 
-DROP SCHEMA IF EXISTS constelation_publicacao_prova;
-CREATE SCHEMA constelation_publicacao_prova;
-USE constelation_publicacao_prova;
+DROP SCHEMA IF EXISTS constellation_publicacao_prova;
+CREATE SCHEMA constellation_publicacao_prova;
+USE constellation_publicacao_prova;
 
 # ----------------------------------------------------------------------------
 # -- MAIN
@@ -49,10 +49,10 @@ CREATE TABLE dim_data (
 CREATE TABLE dim_autor (
     id INT NOT NULL AUTO_INCREMENT,
     nome_autor VARCHAR(30) UNIQUE,
-    departamento_sigla VARCHAR(30),
-    departamento_extenso VARCHAR(50),
+	departamento_sigla VARCHAR(30),
+    departamento_extenso VARCHAR(75),
     instituto_sigla VARCHAR(30),
-    instituto_extenso VARCHAR(50),
+    instituto_extenso VARCHAR(75),
     universidade_sigla VARCHAR(30),
     universidade_extenso VARCHAR(50),
     linha_pesquisa VARCHAR(30),
@@ -73,9 +73,9 @@ CREATE TABLE dim_docente (
     id_docente INT NOT NULL,
 	nome VARCHAR(30),
 	departamento_sigla VARCHAR(30),
-    departamento_extenso VARCHAR(50),
+    departamento_extenso VARCHAR(75),
     instituto_sigla VARCHAR(30),
-    instituto_extenso VARCHAR(50),
+    instituto_extenso VARCHAR(75),
     universidade_sigla VARCHAR(30),
     universidade_extenso VARCHAR(50),
     CONSTRAINT pk_dim_docente PRIMARY KEY (id)
@@ -85,10 +85,11 @@ CREATE TABLE dim_aluno (
     id INT NOT NULL AUTO_INCREMENT,
     id_aluno INT NOT NULL,
 	nome VARCHAR(30),
+    curso_extenso VARCHAR(50),
 	departamento_sigla VARCHAR(30),
-    departamento_extenso VARCHAR(50),
+    departamento_extenso VARCHAR(75),
     instituto_sigla VARCHAR(30),
-    instituto_extenso VARCHAR(50),
+    instituto_extenso VARCHAR(75),
     universidade_sigla VARCHAR(30),
     universidade_extenso VARCHAR(50),
     CONSTRAINT pk_dim_aluno PRIMARY KEY (id)
@@ -96,8 +97,10 @@ CREATE TABLE dim_aluno (
 
 CREATE TABLE dim_disciplina (
     id INT NOT NULL AUTO_INCREMENT,
-	id_disciplina VARCHAR(30),
-    nome VARCHAR(50),
+    nome_sigla VARCHAR(30),
+    nome_extenso VARCHAR(50),
+    ano INT(4),
+    semestre INT(1),
 	departamento_sigla VARCHAR(30),
     departamento_extenso VARCHAR(50),
     instituto_sigla VARCHAR(30),

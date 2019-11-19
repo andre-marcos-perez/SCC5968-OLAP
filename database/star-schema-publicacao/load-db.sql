@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # - FILE: load-db.sql
-# - DESC: Load data into publicacao-prova constelation schema.
+# - DESC: Load data into publicacao star schema.
 # ----------------------------------------------------------------------------
 # - AUTH: Andre Perez, andre.marcos.perez@usp.br
 # - DATE: 2019-11-13
@@ -10,7 +10,7 @@
 # -- SETUP
 # ----------------------------------------------------------------------------
 
-USE constelation_publicacao_prova;
+USE star_publicacao;
 
 # ----------------------------------------------------------------------------
 # -- MAIN
@@ -49,3 +49,8 @@ INSERT INTO dim_local_publicacao VALUES (4, '0272-1716', 'IEEE Computer Graphics
 # ----------------------------------------------------------------------------
 # -- ROLLBACK
 # ----------------------------------------------------------------------------
+
+DELETE FROM fact_publicacao;
+DELETE FROM dim_data;
+DELETE FROM dim_autor;
+DELETE FROM dim_local_publicacao;

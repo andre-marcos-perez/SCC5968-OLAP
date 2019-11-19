@@ -1,6 +1,6 @@
 # ----------------------------------------------------------------------------
 # - FILE: query-db.sql
-# - DESC: Query data on publicacao-prova constelation schema.
+# - DESC: Query data on publicacao star schema.
 # ----------------------------------------------------------------------------
 # - AUTH: Andre Perez, andre.marcos.perez@usp.br
 # - DATE: 2019-11-13
@@ -10,7 +10,7 @@
 # -- SETUP
 # ----------------------------------------------------------------------------
 
-USE constelation_publicacao_prova;
+USE star_publicacao;
 
 # ----------------------------------------------------------------------------
 # -- MAIN

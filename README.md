@@ -1,2 +1,37 @@
-# SCC5968-OLAP
-Repository for SCC5968 Large Scale Analytics Processing discipline @ MSc. Data Science | ICMC | USP
+# SCC5968 Large Scale Analytics Data Processing
+
+Repository for SCC5968 Large Scale Analytics Data Processing discipline @ MSc. Data Science | ICMC | USP.
+
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+To run the project, install the following:
+
+* [MySQL Server 8.0.18](hhttps://dev.mysql.com/downloads/mysql/) - Official MySQL Server;
+* [MySQL Workbench 8.0.18](https://dev.mysql.com/downloads/workbench/) - Official MySQL Integrated Development Environment.
+
+### Deployment
+
+To create a schema and load its data, run the setup and main sections of the following scripts:
+
+```
+database\<schema>\create-db.sql
+database\<schema>\load-db.sql
+```
+
+Once created, you can run the queries on the following script:
+
+```
+database\<schema>\query-db.sql
+```
+
+## Authors
+
+* **André Perez** - *Initial work* - [LinkedIn](https://www.linkedin.com/in/andremarcosperez/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

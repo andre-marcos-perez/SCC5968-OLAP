@@ -10,9 +10,9 @@
 # -- SETUP
 # ----------------------------------------------------------------------------
 
-DROP SCHEMA IF EXISTS publicacao;
-CREATE SCHEMA publicacao;
-USE publicacao;
+DROP SCHEMA IF EXISTS star_publicacao;
+CREATE SCHEMA star_publicacao;
+USE star_publicacao;
 
 # ----------------------------------------------------------------------------
 # -- MAIN
@@ -40,10 +40,10 @@ CREATE TABLE dim_data (
 CREATE TABLE dim_autor (
     id INT NOT NULL AUTO_INCREMENT,
     nome_autor VARCHAR(30),
-    departamento_sigla VARCHAR(30),
-    departamento_extenso VARCHAR(50),
+	departamento_sigla VARCHAR(30),
+    departamento_extenso VARCHAR(75),
     instituto_sigla VARCHAR(30),
-    instituto_extenso VARCHAR(50),
+    instituto_extenso VARCHAR(75),
     universidade_sigla VARCHAR(30),
     universidade_extenso VARCHAR(50),
     linha_pesquisa VARCHAR(30),
