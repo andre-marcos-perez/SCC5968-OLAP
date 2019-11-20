@@ -1,6 +1,6 @@
-# SCC5968 Large Scale Analytics Data Processing
+# SCC5968 Large Scale Analytical Data Processing
 
-Repository for SCC5968 Large Scale Analytics Data Processing discipline @ MSc. Data Science | ICMC | USP.
+Repository for SCC5968 Large Scale Analytical Data Processing discipline @ MSc. Data Science | ICMC | USP.
 
 ## Getting Started
 
