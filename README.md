@@ -18,14 +18,14 @@ To run the project, install the following:
 To create a schema and load its data, run the setup and main sections of the following scripts:
 
 ```
-database\<schema>\create-db.sql
-database\<schema>\load-db.sql
+database\<question>\<schema>\create-db.sql
+database\<question>\<schema>\load-db.sql
 ```
 
 Once created, you can run the queries on the following script:
 
 ```
-database\<schema>\query-db.sql
+database\<question>\<schema>\query-db.sql
 ```
 
 ## Authors
